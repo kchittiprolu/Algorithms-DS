@@ -1,0 +1,11 @@
+/Users/karthik/Desktop/Console/AlgorithmsDS/bin/Debug/netcoreapp2.1/AlgorithmsDS.deps.json
+/Users/karthik/Desktop/Console/AlgorithmsDS/bin/Debug/netcoreapp2.1/AlgorithmsDS.runtimeconfig.json
+/Users/karthik/Desktop/Console/AlgorithmsDS/bin/Debug/netcoreapp2.1/AlgorithmsDS.runtimeconfig.dev.json
+/Users/karthik/Desktop/Console/AlgorithmsDS/bin/Debug/netcoreapp2.1/AlgorithmsDS.dll
+/Users/karthik/Desktop/Console/AlgorithmsDS/bin/Debug/netcoreapp2.1/AlgorithmsDS.pdb
+/Users/karthik/Desktop/Console/AlgorithmsDS/obj/Debug/netcoreapp2.1/AlgorithmsDS.csprojAssemblyReference.cache
+/Users/karthik/Desktop/Console/AlgorithmsDS/obj/Debug/netcoreapp2.1/AlgorithmsDS.csproj.CoreCompileInputs.cache
+/Users/karthik/Desktop/Console/AlgorithmsDS/obj/Debug/netcoreapp2.1/AlgorithmsDS.AssemblyInfoInputs.cache
+/Users/karthik/Desktop/Console/AlgorithmsDS/obj/Debug/netcoreapp2.1/AlgorithmsDS.AssemblyInfo.cs
+/Users/karthik/Desktop/Console/AlgorithmsDS/obj/Debug/netcoreapp2.1/AlgorithmsDS.dll
+/Users/karthik/Desktop/Console/AlgorithmsDS/obj/Debug/netcoreapp2.1/AlgorithmsDS.pdb
