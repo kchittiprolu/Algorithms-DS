@@ -29,3 +29,8 @@ bld/
 msbuild.log
 msbuild.err
 msbuild.wrn
+obj
+obj/AlgorithmsDS.csproj.nuget.cache
+obj/AlgorithmsDS.csproj.nuget.g.props
+obj/AlgorithmsDS.csproj.nuget.g.targets
+obj/project.assets.json
