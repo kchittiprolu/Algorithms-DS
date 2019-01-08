@@ -34,3 +34,9 @@ obj/AlgorithmsDS.csproj.nuget.cache
 obj/AlgorithmsDS.csproj.nuget.g.props
 obj/AlgorithmsDS.csproj.nuget.g.targets
 obj/project.assets.json
+.vs/AlgorithmsDS/xs/sqlite3/db.lock
+.vs/AlgorithmsDS/xs/sqlite3/storage.ide
+.vs/AlgorithmsDS/xs/sqlite3/storage.ide-shm
+.vs/AlgorithmsDS/xs/sqlite3/storage.ide-wal
+bin/Debug/netcoreapp2.1/AlgorithmsDS.dll
+bin/Debug/netcoreapp2.1/AlgorithmsDS.pdb
