@@ -7,6 +7,7 @@ namespace AlgorithmsDS
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Console.Read();
         }
     }
 }
