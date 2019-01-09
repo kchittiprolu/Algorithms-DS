@@ -39,7 +39,7 @@ namespace Algorithms_DS.Trees
            Console.WriteLine("PostOrder Traversal:");
           PostOrderTraversal(root);
       }
-        private void PostOrderTraversal(TreeNode root) { 
+        public void PostOrderTraversal(TreeNode root) { 
         if (root != null) { 
             PostOrderTraversal(root.left); 
             PostOrderTraversal(root.right); 
@@ -51,7 +51,7 @@ namespace Algorithms_DS.Trees
          Console.WriteLine("PreOrder Traversal:");
         PreOrderTraversal(root);
       }
-        private void PreOrderTraversal(TreeNode root) { 
+        public void PreOrderTraversal(TreeNode root) { 
             if (root != null) { 
                 Console.WriteLine(root.data); 
                 PreOrderTraversal(root.left); 
@@ -64,7 +64,7 @@ namespace Algorithms_DS.Trees
             } 
   
     // A utility function to do inorder traversal of BST 
-    private void InorderRec(TreeNode root) { 
+    public void InorderRec(TreeNode root) { 
         if (root != null) { 
             InorderRec(root.left); 
             Console.WriteLine(root.data); 
