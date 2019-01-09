@@ -1,3 +1,4 @@
+using System;
 namespace Algorithms_DS.Trees
 {
     public class TreeNode
@@ -9,36 +10,70 @@ namespace Algorithms_DS.Trees
     }
 
     public class Tree{
-      public TreeNode Insert(TreeNode root, int data){
-            if(root == null)
-            return new TreeNode(data);
-            else{
-                TreeNode curr;
-                if(data <= root.data){
-                    curr = Insert(root.left, data);
-                    root.left = curr;
-                }
-                else{
-                    curr = Insert(root.right,data);
-                    root.right = curr;
-                }
-                return root;
+        TreeNode root;
+        public Tree(){
+            root = null;
+        }
+
+    public TreeNode GetRoot(){
+        return root;
+    }
+     public void Insert(int data){
+         root = InsertNode(root,data);
+     }
+      private TreeNode InsertNode(TreeNode root, int data){
+            if(root == null){
+            root= new TreeNode(data);
+            return root;
             }
+
+        if(data <= root.data)
+            root.left = InsertNode(root.left, data);
+        else
+            root.right = InsertNode(root.right,data);
+        
+        return root;
       }
 
-        public void Traverse(TreeNode root)
-        {
-            if (root == null)
-            {
-                return;
-            }
-            Traverse(root.left);
-            Traverse(root.right);
-        }
+      public void PostOrder(){
+           Console.WriteLine("PostOrder Traversal:");
+          PostOrderTraversal(root);
+      }
+        private void PostOrderTraversal(TreeNode root) { 
+        if (root != null) { 
+            PostOrderTraversal(root.left); 
+            PostOrderTraversal(root.right); 
+            Console.WriteLine(root.data); 
+        } 
+      } 
+
+      public void PreOrder(){
+         Console.WriteLine("PreOrder Traversal:");
+        PreOrderTraversal(root);
+      }
+        private void PreOrderTraversal(TreeNode root) { 
+            if (root != null) { 
+                Console.WriteLine(root.data); 
+                PreOrderTraversal(root.left); 
+                PreOrderTraversal(root.right); 
+            } 
+        } 
+        public void Inorder()  { 
+            Console.WriteLine("InOrder Traversal:");
+            InorderRec(root); 
+            } 
+  
+    // A utility function to do inorder traversal of BST 
+    private void InorderRec(TreeNode root) { 
+        if (root != null) { 
+            InorderRec(root.left); 
+            Console.WriteLine(root.data); 
+            InorderRec(root.right); 
+        } 
+    } 
         public void ConstructTree(int[] input){
-            TreeNode root = null;
             foreach(int i in input){
-                root = Insert(root, i);
+                 Insert(i);
             }
         }
     }
