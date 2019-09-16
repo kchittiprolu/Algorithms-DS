@@ -8,9 +8,9 @@ namespace AlgorithmsDS
     {
         static void Main(string[] args)
         {
-            var binGap = new MaxBinaryGapInArray();
-            Console.WriteLine("Max binary gap:{0}",binGap.MaxbinaryGap(1041));
-            Console.Read();
+            var twoSum = new TwoSum();
+            var result = twoSum.TwoSumProblem(9,new int[] {2,7,11,15});
+            Console.WriteLine("Indeces of two numbers: [{0}] ", string.Join(",",result));
         }
     }
 }
