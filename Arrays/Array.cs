@@ -45,6 +45,26 @@ namespace Algorithms_DS.Arrays
             count--;
         }
 
+        public void InsertAt(int item,int index)
+        {
+            int newCount = items.Length + 1;
+            int[] newItems = new int[newCount];
+            for(int i = 0, j=0;i<count;i++,j++)
+            {
+                if(j==index)
+                 {
+                     newItems[j] = item;
+                     i--;
+                 }
+                 else
+                 {
+                    newItems[j] = items[i];
+                 }
+            }
+            items = newItems;
+            count++;
+        }
+
         public int IndexOf(int item)
         {
             for(int i=0;i<count;i++)
@@ -66,25 +86,44 @@ namespace Algorithms_DS.Arrays
             return max;
         }
 
-        public int[] Insersect(int[] someItems)
+        public Array Insersect(Array someItems)
         {
-            int[] commonArray = new int[items.Length];
+            Array commonArray = new Array(items.Length);
             int commonCount = 0;
             for(int i =0; i<count;i++)
             {
-                for(int j=0;j<someItems.Length;j++)
+                for(int j=0;j<someItems.count;j++)
                 {
-                    if(items[i] == someItems[j])
+                    if(items[i] == someItems.items[j])
                     {
-                     commonArray[commonCount] = items[i];
+                     commonArray.items[commonCount] = items[i];
                      commonCount++;
                     }
                 }
             }
+
             if(commonCount > 0)
-             return commonArray;
+            {
+              commonArray.count = commonCount;
+              return commonArray;
+            }
              
             return null;
+        }
+
+        public int[] ReverseArray()
+        {
+            if(count == 0)
+                return null;
+
+            for(int i=0;i<count-1;i++)
+            {
+                int temp = items[i];
+                items[i] = items[count - i -1];
+                items[count - i -1] = temp;
+            }
+            
+            return items;
         }
     }
 }
