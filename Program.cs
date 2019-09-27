@@ -1,16 +1,23 @@
 ﻿using System;
 using Algorithms_DS.Trees;
 using Algorithms_DS.Arrays;
-
+using Algorithms_DS.Strings;
 namespace AlgorithmsDS
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var twoSum = new TwoSum();
-            var result = twoSum.TwoSumProblem(9,new int[] {2,7,11,15});
-            Console.WriteLine("Indeces of two numbers: [{0}] ", string.Join(",",result));
+            Algorithms_DS.Arrays.Array a = new Algorithms_DS.Arrays.Array(2);
+            a.Insert(30);
+            a.Insert(40);
+            a.Insert(50);
+            a.Print();
+            Algorithms_DS.Arrays.Array b = new Algorithms_DS.Arrays.Array(2);
+            b.Insert(10);
+            b.Insert(20);
+            b.Insert(50);
+            b.Print();
         }
     }
 }
