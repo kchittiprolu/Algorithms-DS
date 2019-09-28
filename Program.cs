@@ -2,18 +2,25 @@
 using Algorithms_DS.Trees;
 using Algorithms_DS.Arrays;
 using Algorithms_DS.Strings;
+using Algorithms_DS.LinkedLists;
 namespace AlgorithmsDS
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Algorithms_DS.Arrays.Array a = new Algorithms_DS.Arrays.Array(3);
-            a.Insert(30);
-            a.Insert(40);
-            a.Insert(50);
-            a.InsertAt(10,0);
-            a.Print();
+          LinkedList list = new LinkedList();
+          list.AddLast(10);
+          list.AddLast(20);
+          list.AddLast(30);
+          Console.WriteLine(list.IndexOf(20));
+          Console.WriteLine(list.Contains(10));
+          //list.RemoveLast();
+          Console.WriteLine(list.Size());
+          foreach(var item in list.ToArray())
+          {
+            Console.WriteLine(item);
+          }
         }
     }
 }
