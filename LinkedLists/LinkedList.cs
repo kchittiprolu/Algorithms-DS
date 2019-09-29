@@ -22,6 +22,75 @@ namespace Algorithms_DS.LinkedLists
             return size;
         }
 
+        public int[] FindMiddle()
+        {
+            var slow = first;
+            var fast = first;
+            while(fast != last && fast.next != last)
+            {
+                fast = fast.next.next;
+                slow = slow.next;
+            }
+            if(fast == last)
+                return new int[] {slow.value};
+            else
+            return new int[] {slow.value, slow.next.value};
+        }
+
+        public int GetKthFromTheEnd(int k)
+        {
+            if(IsEmpty())
+            throw new NullReferenceException();
+            var a = first;
+            var b = first;
+
+            for(int i=0;i<k-1;i++)
+            {
+                b = b.next;
+                if(b == null)
+                throw new ArgumentOutOfRangeException();
+            }
+                while(b != last)
+                {
+                    a = a.next;
+                    b = b.next;
+                }
+                return a.value;
+        }
+
+        public void ReverseInline()
+        {
+            if(IsEmpty())
+            return;
+            var prev = first;
+            var current = first.next;
+            while(current != null)
+            {
+                var next = current.next;
+                current.next = prev;
+                prev = current;
+                current = next;
+            }
+            last = first;
+            last.next = null;
+            first = prev;
+        }
+        public void Reverse()
+        {
+            if(IsEmpty())
+            return;
+            LinkedList newList = new LinkedList();
+            var current = first;
+            while(current != null)
+            {
+                 newList.AddFirst(current.value);
+                 current = current.next;
+            }
+            
+            first = newList.first;
+            last = newList.last;
+        }
+
         public int[] ToArray()
         {
             int[] array = new int[size];
@@ -76,7 +145,8 @@ namespace Algorithms_DS.LinkedLists
         public bool Contains(int item)
         {
             return IndexOf(item) != -1;
-        }
+        }         
+        
         public int IndexOf(int item)
         {
             int index = 0;
