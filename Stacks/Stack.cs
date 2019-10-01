@@ -4,8 +4,12 @@ namespace Algorithms_DS.Stacks
 {
     public class Stack
     {
-        private int[] items = new int[5];
+        private int[] items;
         private int count = 0;
+        public Stack(int capacity)
+        {
+            items = new int[capacity];
+        }
         public void Push(int item)
         {
             if(count == items.Length)
