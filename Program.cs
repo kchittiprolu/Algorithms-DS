@@ -12,6 +12,8 @@ namespace AlgorithmsDS
         static void Main(string[] args)
         {
           Console.WriteLine(FirstNonRepeatingChar("a green apple"));
+          
+          Console.WriteLine(FirstRepeatedChar("a green apple"));
         }
 
         static char FirstNonRepeatingChar(string input)
@@ -29,6 +31,18 @@ namespace AlgorithmsDS
           {
               if(dict[item.Key] == 1)
               return item.Key;
+          }
+          return char.MinValue;
+        }
+
+        static char FirstRepeatedChar(string input)
+        {
+          var set = new HashSet<int>();
+          foreach (char c in input)
+          {
+              if(set.Contains(c))
+                 return c;
+               set.Add(c);
           }
           return char.MinValue;
         }
