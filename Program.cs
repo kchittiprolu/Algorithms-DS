@@ -5,15 +5,21 @@ using Algorithms_DS.Strings;
 using Algorithms_DS.LinkedLists;
 using Algorithms_DS.Queues;
 using System.Collections.Generic;
+using Algorithms_DS.HashTables;
 namespace AlgorithmsDS
 {
     class Program
     {
         static void Main(string[] args)
         {
-          Console.WriteLine(FirstNonRepeatingChar("a green apple"));
+          HashTable table = new HashTable();
+          table.Put(6,"A"); //1
+          table.Put(8,"B"); //3
+          table.Put(11,"C"); //1
+          table.Put(11,"K");
+          table.Remove(11);
+          Console.WriteLine(table.Get(11));
           
-          Console.WriteLine(FirstRepeatedChar("a green apple"));
         }
 
         static char FirstNonRepeatingChar(string input)
