@@ -1,6 +1,7 @@
 using System;
 using System.Text;
 using Algorithms_DS.Stacks;
+using System.Collections.Generic;
 namespace Algorithms_DS.Queues
 {
     public class ArrayQueue
@@ -49,6 +50,28 @@ namespace Algorithms_DS.Queues
             while(!st.IsEmpty())
              Enqueue(st.Pop());
             return null;
+        }
+
+        public void ReverseOrderOfFirstKElements(int k)
+        {
+            if(k>count)
+               throw new InvalidOperationException();
+            //Method 1
+            // for(int i=0; i<k-1;i++)
+            // {
+            //     int temp = items[k-i-1];
+            //     items[k-i-1] = items[i];
+            //     items[i] = temp;
+            // }
+            
+            //Method 2
+            Stack<int> st = new Stack<int>();
+            for(int i=0;i<k;i++)
+                st.Push(Dequeue());
+            while(st.Count >0)
+                Enqueue(st.Pop());
+            for(int i=0;i<items.Length-k;i++)
+                Enqueue(Dequeue());
         }
 
         public override string ToString()
