@@ -5,6 +5,12 @@ namespace Algorithms_DS.Trees
 //some nodes of the two trees are overlapped while the others are not.
 // You need to merge them into a new binary tree. The merge rule is that if two nodes overlap, 
 //then sum node values up as the new value of the merged node. Otherwise, the NOT null node will be used as the node of new tree.
+//For Execution: (copy & paste below lines in Main method)
+// var merge = new MergeTwoBinaryTrees();
+// var mergedTree = merge.MergeTrees(tree1.GetRoot(),tree3.GetRoot());
+// Tree tree = new Tree();
+// Console.WriteLine("Merged Tree:");
+// tree.PreOrderTraversal(mergedTree);
 #endregion
     public class MergeTwoBinaryTrees
     {

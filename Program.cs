@@ -1,40 +1,56 @@
 ﻿using System;
 using Algorithms_DS.Trees;
-
+using Algorithms_DS.Arrays;
+using Algorithms_DS.Strings;
+using Algorithms_DS.LinkedLists;
+using Algorithms_DS.Queues;
+using System.Collections.Generic;
+using Algorithms_DS.HashTables;
 namespace AlgorithmsDS
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            int[] input = {5,1,2,4,6,3,0};
-            Tree tree1 = new Tree();
-            tree1.ConstructTree(input);
-            tree1.Inorder();
-            tree1.PostOrder();
-            tree1.PreOrder();
-            var root = tree1.GetRoot();
-            Console.WriteLine("Root:{0}",root.data);
+          HashTable table = new HashTable();
+          table.Put(6,"A"); //1
+          table.Put(8,"B"); //3
+          table.Put(11,"C"); //1
+          table.Put(11,"K");
+          table.Remove(11);
+          Console.WriteLine(table.Get(11));
+          
+        }
 
-            int[] input2 = {1,1,1,1,1,};
-            Tree tree2 = new Tree();
-            tree2.ConstructTree(input2);
-            tree2.PostOrder();
-            var uniq = new UniqValuesTree();
-            Console.WriteLine(uniq.IsUniqvalTree(tree2.GetRoot()));
+        static char FirstNonRepeatingChar(string input)
+        {
+          var dict = new Dictionary<char,int>();
+          for(int i=0;i<input.Length;i++)
+          {
+            if(dict.ContainsKey(input[i])){
+              dict[input[i]]++;
+            }
+            else
+               dict.Add(input[i],1);
+          }
+          foreach (var item in dict)
+          {
+              if(dict[item.Key] == 1)
+              return item.Key;
+          }
+          return char.MinValue;
+        }
 
-            Tree tree3 = new Tree();
-            tree3.ConstructTree(new int[] {1,2,3,4,9});
-            tree3.PostOrder();
-
-            var merge = new MergeTwoBinaryTrees();
-            var mergedTree = merge.MergeTrees(tree1.GetRoot(),tree3.GetRoot());
-            Tree tree = new Tree();
-            Console.WriteLine("Merged Tree:");
-            tree.PreOrderTraversal(mergedTree);
-
-            Console.Read();
+        static char FirstRepeatedChar(string input)
+        {
+          var set = new HashSet<int>();
+          foreach (char c in input)
+          {
+              if(set.Contains(c))
+                 return c;
+               set.Add(c);
+          }
+          return char.MinValue;
         }
     }
 }
