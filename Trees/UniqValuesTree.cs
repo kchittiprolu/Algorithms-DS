@@ -16,7 +16,7 @@ namespace Algorithms_DS.Trees
     #endregion
     public class UniqValuesTree
     {
-        public bool IsUniqvalTree(TreeNode root){
+        public bool IsUniqvalTree(Node root){
             if(root == null)
             return true;
 

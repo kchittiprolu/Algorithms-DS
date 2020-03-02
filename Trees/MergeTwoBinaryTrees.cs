@@ -14,12 +14,12 @@ namespace Algorithms_DS.Trees
 #endregion
     public class MergeTwoBinaryTrees
     {
-        public TreeNode MergeTrees(TreeNode t1, TreeNode t2) {
+        public Node MergeTrees(Node t1, Node t2) {
         if(t1 == null && t2 == null ) 
             return null;
         
         int val = (t1 == null ? 0 : t1.data) + (t2== null ? 0 : t2.data);
-        TreeNode tree = new TreeNode(val);
+        Node tree = new Node(val);
         
         tree.left =  MergeTrees(t1 == null ? null:t1.left, t2==null?null:t2.left);
         tree.right = MergeTrees(t1 == null ? null:t1.right, t2==null?null:t2.right);
