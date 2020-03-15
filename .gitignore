@@ -40,3 +40,5 @@ obj/project.assets.json
 .vs/AlgorithmsDS/xs/sqlite3/storage.ide-wal
 bin/Debug/netcoreapp2.1/AlgorithmsDS.dll
 bin/Debug/netcoreapp2.1/AlgorithmsDS.pdb
+bin/Debug/netcoreapp2.1/AlgorithmsDS.dll
+bin/Debug/netcoreapp2.1/AlgorithmsDS.pdb
